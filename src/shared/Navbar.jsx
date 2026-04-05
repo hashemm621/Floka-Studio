@@ -18,17 +18,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full bg-[#F4F4F4]">
+      <nav className="w-full px-4 bg-[#F4F4F4]">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-19">
             {/* Logo */}
-            <div className="shrink-0">
+            <a href="#" className="shrink-0">
               <img
                 className="h-11.75 w-auto lg:max-h-6"
                 src={logo}
                 alt="Floka Logo"
               />
-            </div>
+            </a>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex w-3/4  items-center justify-between">
@@ -43,13 +43,13 @@ const Navbar = () => {
                 ))}
               </div>
 
-              <div className="flex gap-1 items-center justify-center">
+              <div className="flex gap-1 items-center justify-center ml-2">
                 <a
                   href="info@floka.com"
                   className="text-lg font-medium text-[#575757] not-first-of-type:not-only:transition-colors">
                   info@floka.com
                 </a>
-                <span> | </span>
+                <span className="text-gray-400"> | </span>
                 <RoundMenuIcon />
               </div>
             </div>
@@ -113,7 +113,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="KEYWORDS..."
-              className="w-full bg-gray-50 border-none py-3 px-4 text-sm focus:ring-1 focus:ring-gray-200 outline-none"
+              className="w-full font-funnel bg-gray-50 border-none py-3 px-4 text-sm focus:ring-1 focus:ring-gray-200 outline-none"
             />
             <Search
               className="absolute right-3 top-3 text-gray-400"

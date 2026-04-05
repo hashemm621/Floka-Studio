@@ -1,13 +1,27 @@
 import React from 'react';
 import Navbar from './shared/Navbar';
+import Home from './pages/home/Home';
+import CustomCursor from './customAnimation/CustomCursor';
 
 const Root = () => {
     return (
-        <div>
-           <nav>
+        <>
+
+        <CustomCursor/>
+           <header>
             <Navbar/>
-           </nav>
-        </div>
+           </header>
+            
+          
+
+           <main>
+            <Home/>
+           </main>
+
+           <footer>
+
+           </footer>
+        </>
     );
 };
 
