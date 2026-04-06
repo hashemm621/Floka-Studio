@@ -3,6 +3,7 @@ import Banner from './Banner';
 import StatsSection from './StatsSection';
 import ReviewSection from './ReviewSection';
 import InfiniteMarquee from './InfiniteMarquee';
+import PortfolioSection from './PortfolioSection';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <StatsSection/>
             <ReviewSection/>
             <InfiniteMarquee/>
+            <PortfolioSection/>
         </div>
     );
 };
