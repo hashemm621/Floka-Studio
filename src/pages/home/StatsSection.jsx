@@ -36,7 +36,7 @@ const StatsSection = () => {
     <div className='max-w-7xl mx-auto py-20 px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8'>
 
 
-        <div className="flex flex-col items-start gap-5  bg-[#F4F4F4]">
+        <div className="flex flex-col items-start gap-5">
       
       
       <div className="relative w-40 h-40 flex items-center justify-center">
