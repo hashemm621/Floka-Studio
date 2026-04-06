@@ -1,28 +1,39 @@
-import React from 'react';
-import Navbar from './shared/Navbar';
-import Home from './pages/home/Home';
-import CustomCursor from './customAnimation/CustomCursor';
+import React, { useEffect, useState } from "react";
+import Navbar from "./shared/Navbar";
+import Home from "./pages/home/Home";
+import CustomCursor from "./customAnimation/CustomCursor";
+import Preloader from "./customAnimation/Preloader";
 
 const Root = () => {
-    return (
-        <>
+  const [loading, setLoading] = useState(true);
 
-        <CustomCursor/>
-           <header>
-            <Navbar/>
-           </header>
-            
-          
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
 
-           <main>
-            <Home/>
-           </main>
+    return () => clearTimeout(timer);
+  }, []);
+  return (
+    <>
+      <div className="bg-white min-h-screen">
+        {loading && <Preloader />}
 
-           <footer>
+        <div className={loading ? "hidden" : "block"}>
+          <CustomCursor />
+          <header>
+            <Navbar />
+          </header>
 
-           </footer>
-        </>
-    );
+          <main>
+            <Home />
+          </main>
+
+          <footer></footer>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Root;
